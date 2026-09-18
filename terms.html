@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vilkår og betingelser – SkatKm</title>
+  <link rel="icon" href="logo.jpg" type="image/jpeg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1a2c5b; --navy-dark: #0f1c3d;
+      --amber: #F5B84A; --text: #111827;
+      --text-secondary: #6b7280; --border: #e5e7eb; --off-white: #f8f9fc;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--off-white); color: var(--text); }
+    nav {
+      background: var(--navy-dark); padding: 0 24px;
+      height: 64px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display:flex;align-items:center;gap:10px;text-decoration:none; }
+    .nav-logo img { width:32px;height:32px;border-radius:7px;object-fit:cover; }
+    .nav-logo span { font-size:17px;font-weight:700;color:#fff; }
+    .nav-logo em { color:var(--amber);font-style:normal; }
+    .nav-back { font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none;display:flex;align-items:center;gap:6px; }
+    .nav-back:hover { color:var(--amber); }
+    .hero-sm {
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+      padding: 56px 24px 48px; text-align: center;
+    }
+    .hero-sm .badge {
+      display:inline-block;background:rgba(245,184,74,0.15);border:1px solid rgba(245,184,74,0.3);
+      color:var(--amber);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+      padding:5px 14px;border-radius:100px;margin-bottom:16px;
+    }
+    .hero-sm h1 { font-size:2rem;font-weight:700;color:#fff;letter-spacing:-0.02em;margin-bottom:10px; }
+    .hero-sm p { font-size:14px;color:rgba(255,255,255,0.55); }
+    .content { max-width: 760px; margin: 0 auto; padding: 60px 24px 100px; }
+    .lang-switch { display:flex;gap:10px;margin-bottom:40px; }
+    .lang-btn {
+      padding:6px 16px;border-radius:8px;border:1px solid var(--border);
+      font-size:12px;font-weight:600;cursor:pointer;background:var(--off-white);color:var(--text);
+      transition:all 0.2s;
+    }
+    .lang-btn.active { background:var(--navy);color:#fff;border-color:var(--navy); }
+    .legal-section { margin-bottom: 40px; }
+    .legal-section h2 {
+      font-size: 17px; font-weight: 600; color: var(--text);
+      margin-bottom: 12px; padding-bottom: 8px;
+      border-bottom: 2px solid var(--amber); display: inline-block;
+    }
+    .legal-section p, .legal-section li {
+      font-size: 14px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 10px;
+    }
+    .legal-section ul { padding-left: 20px; }
+    .legal-section li { margin-bottom: 6px; }
+    .highlight {
+      background: rgba(245,184,74,0.08); border-left: 3px solid var(--amber);
+      padding: 16px 20px; border-radius: 0 8px 8px 0;
+      margin: 16px 0; font-size: 14px; color: var(--text); line-height: 1.7;
+    }
+    .warning {
+      background: rgba(239,68,68,0.06); border-left: 3px solid #ef4444;
+      padding: 16px 20px; border-radius: 0 8px 8px 0;
+      margin: 16px 0; font-size: 14px; color: var(--text); line-height: 1.7;
+    }
+    .contact-card {
+      background: var(--navy-dark); border-radius: 16px; padding: 28px; color: #fff; margin-top: 48px;
+    }
+    .contact-card h3 { font-size:15px;font-weight:600;color:var(--amber);margin-bottom:10px; }
+    .contact-card p { font-size:13px;color:rgba(255,255,255,0.7);line-height:1.7; }
+    .contact-card a { color:var(--amber);text-decoration:none; }
+    footer {
+      background:var(--navy-dark);padding:24px;text-align:center;
+      font-size:12px;color:rgba(255,255,255,0.4);
+    }
+    footer a { color:rgba(255,255,255,0.4);text-decoration:none;margin:0 8px; }
+    footer a:hover { color:var(--amber); }
+    [data-lang] { display:none; }
+    [data-lang].active { display:block; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="logo.jpg" alt="SkatKm" />
+    <span>skat<em>Km</em></span>
+  </a>
+  <a class="nav-back" href="index.html">← Tilbage til forsiden</a>
+</nav>
+
+<div class="hero-sm">
+  <div class="badge">Juridisk</div>
+  <h1>Vilkår og betingelser</h1>
+  <p>Opdateret: September 2026 · Version 1.0</p>
+</div>
+
+<div class="content">
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('da')">🇩🇰 Dansk</button>
+    <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
+  </div>
+
+  <!-- DANISH -->
+  <div data-lang="da" class="active">
+
+    <div class="legal-section">
+      <h2>1. Acceptering af vilkår</h2>
+      <p>Ved at downloade, installere eller bruge SkatKm-appen accepterer du disse vilkår og betingelser. Hvis du ikke accepterer vilkårene, bedes du afinstallere appen.</p>
+      <p>SkatKm er udviklet og distribueret af chmays.app (Alex Mays), herefter kaldet "vi", "os" eller "udvikleren".</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>2. Brug af appen</h2>
+      <p>SkatKm er et hjælpeværktøj til beregning og logning af kørselsfradrag for pendlere i Danmark, Sverige, Norge og Finland.</p>
+      <div class="warning">
+        <strong>Vigtig ansvarsfraskrivelse:</strong> SkatKm er <strong>ikke</strong> et skattemæssigt rådgivningsværktøj og udgør ikke professionel skattemæssig rådgivning. Alle beregninger er vejledende og baseret på offentligt tilgængelige satser. Du er selv ansvarlig for at verificere alle beløb og oplyse korrekte tal på din årsopgørelse.
+      </div>
+      <p>Du må ikke bruge appen til:</p>
+      <ul>
+        <li>Ulovlige formål eller i strid med gældende lovgivning</li>
+        <li>At forsøge at reverse-engineere, dekompilere eller hacke appen</li>
+        <li>Kommerciel videredistribution uden skriftlig tilladelse</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>3. Abonnement og køb</h2>
+      <p>SkatKm tilbyder en gratis prøveperiode på 7 dage med adgang til alle funktioner. Herefter kræves et engangskøb af SkatKm Pro for fortsat adgang til Pro-funktioner.</p>
+      <ul>
+        <li>Betaling behandles udelukkende via Apple App Store</li>
+        <li>Engangskøb giver permanent adgang — ingen løbende abonnement</li>
+        <li>Tilbagebetaling behandles af Apple i henhold til Apples refusionspolitik</li>
+        <li>Priser varierer per land (DK: 79 DKK, SE: 89 SEK, NO: 89 NOK, FI: 7,99 EUR)</li>
+      </ul>
+      <div class="highlight">
+        Ét køb giver adgang på alle dine Apple-enheder med samme Apple ID.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2>4. Skattesatser og beregninger</h2>
+      <p>Skattesatserne i SkatKm opdateres ved hvert nyt skatteår baseret på officielle meddelelser fra:</p>
+      <ul>
+        <li>Skattestyrelsen (DK) — skat.dk</li>
+        <li>Skatteverket (SE) — skatteverket.se</li>
+        <li>Skatteetaten (NO) — skatteetaten.no</li>
+        <li>Verohallinto (FI) — vero.fi</li>
+      </ul>
+      <p>Vi kan ikke garantere at alle satser til enhver tid er opdaterede. Verificer altid med den relevante skattemyndighed inden indberetning.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>5. Immaterielle rettigheder</h2>
+      <p>Alle rettigheder til SkatKm-appen, herunder design, kode, tekst og ikoner, tilhører chmays.app. Du tildeles en begrænset, ikke-eksklusiv licens til at bruge appen til personligt, ikke-kommercielt brug.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>6. Ansvarsfraskrivelse</h2>
+      <p>Appen leveres "som den er" uden garantier af nogen art. Vi er ikke ansvarlige for:</p>
+      <ul>
+        <li>Tab som følge af fejlagtige skatteberegninger</li>
+        <li>Tabte data ved enhedsskift eller iCloud-problemer</li>
+        <li>Ændringer i skatteregler som ikke endnu er implementeret i appen</li>
+        <li>Indirekte tab, følgeskader eller driftstab</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>7. Ændringer i vilkårene</h2>
+      <p>Vi forbeholder os retten til at opdatere disse vilkår. Væsentlige ændringer meddeles via App Store-opdateringer. Fortsat brug af appen efter ændringer udgør accept af de nye vilkår.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>8. Gældende lov</h2>
+      <p>Disse vilkår er underlagt dansk ret. Eventuelle tvister søges løst i mindelighed. Kan dette ikke opnås, afgøres tvister ved de danske domstole.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>9. Kontakt</h2>
+      <p>Spørgsmål til disse vilkår: <a href="mailto:support@chmays.app" style="color:var(--navy);font-weight:500;">support@chmays.app</a></p>
+    </div>
+
+  </div>
+
+  <!-- ENGLISH -->
+  <div data-lang="en">
+
+    <div class="legal-section">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing or using the SkatKm app, you accept these Terms and Conditions. If you do not accept these terms, please uninstall the app.</p>
+      <p>SkatKm is developed and distributed by chmays.app (Alex Mays), hereinafter referred to as "we", "us" or "the developer".</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>2. Use of the App</h2>
+      <p>SkatKm is a tool for calculating and logging commute tax deductions for commuters in Denmark, Sweden, Norway and Finland.</p>
+      <div class="warning">
+        <strong>Important disclaimer:</strong> SkatKm is <strong>not</strong> a professional tax advisory tool and does not constitute professional tax advice. All calculations are indicative and based on publicly available rates. You are solely responsible for verifying all amounts and reporting correct figures on your tax return.
+      </div>
+      <p>You may not use the app to:</p>
+      <ul>
+        <li>Engage in illegal activities or violate applicable laws</li>
+        <li>Attempt to reverse-engineer, decompile or hack the app</li>
+        <li>Commercially redistribute without written permission</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>3. Subscription and Purchases</h2>
+      <p>SkatKm offers a free 7-day trial with access to all features. Thereafter, a one-time purchase of SkatKm Pro is required for continued access to Pro features.</p>
+      <ul>
+        <li>Payment is processed exclusively via Apple App Store</li>
+        <li>One-time purchase provides permanent access — no recurring subscription</li>
+        <li>Refunds are handled by Apple in accordance with Apple's refund policy</li>
+        <li>Prices vary by country (DK: 79 DKK, SE: 89 SEK, NO: 89 NOK, FI: 7.99 EUR)</li>
+      </ul>
+      <div class="highlight">
+        One purchase gives access on all your Apple devices sharing the same Apple ID.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2>4. Tax Rates and Calculations</h2>
+      <p>Tax rates in SkatKm are updated each tax year based on official announcements from:</p>
+      <ul>
+        <li>Skattestyrelsen (DK) — skat.dk</li>
+        <li>Skatteverket (SE) — skatteverket.se</li>
+        <li>Skatteetaten (NO) — skatteetaten.no</li>
+        <li>Verohallinto (FI) — vero.fi</li>
+      </ul>
+      <p>We cannot guarantee that all rates are up to date at all times. Always verify with the relevant tax authority before filing.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>5. Intellectual Property</h2>
+      <p>All rights to the SkatKm app, including design, code, text and icons, belong to chmays.app. You are granted a limited, non-exclusive license to use the app for personal, non-commercial purposes.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>6. Disclaimer of Liability</h2>
+      <p>The app is provided "as is" without warranties of any kind. We are not liable for:</p>
+      <ul>
+        <li>Losses resulting from incorrect tax calculations</li>
+        <li>Lost data due to device changes or iCloud issues</li>
+        <li>Changes in tax rules not yet implemented in the app</li>
+        <li>Indirect losses, consequential damages or loss of earnings</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>7. Changes to Terms</h2>
+      <p>We reserve the right to update these Terms. Material changes will be communicated via App Store updates. Continued use of the app after changes constitutes acceptance of the new terms.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>8. Governing Law</h2>
+      <p>These Terms are governed by Danish law. Any disputes shall first be sought resolved amicably. If this cannot be achieved, disputes shall be settled by the Danish courts.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>9. Contact</h2>
+      <p>Questions about these terms: <a href="mailto:support@chmays.app" style="color:var(--navy);font-weight:500;">support@chmays.app</a></p>
+    </div>
+
+  </div>
+
+  <div class="contact-card">
+    <h3>Spørgsmål til vilkårene? / Questions about the terms?</h3>
+    <p>Kontakt os på <a href="mailto:support@chmays.app">support@chmays.app</a> — vi svarer inden for 48 timer.<br />
+    Contact us at <a href="mailto:support@chmays.app">support@chmays.app</a> — we respond within 48 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <p>
+    © 2026 chmays.app · SkatKm
+    &nbsp;·&nbsp;
+    <a href="index.html">Forside</a>
+    <a href="privacy.html">Privatliv</a>
+    <a href="mailto:support@chmays.app">support@chmays.app</a>
+  </p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('active', el.dataset.lang === lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.includes(lang === 'da' ? 'Dansk' : 'English'));
+    });
+  }
+</script>
+</body>
+</html>

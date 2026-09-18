@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privatlivspolitik – SkatKm</title>
+  <link rel="icon" href="logo.jpg" type="image/jpeg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1a2c5b; --navy-dark: #0f1c3d;
+      --amber: #F5B84A; --text: #111827;
+      --text-secondary: #6b7280; --border: #e5e7eb; --off-white: #f8f9fc;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--off-white); color: var(--text); }
+    nav {
+      background: var(--navy-dark);
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo { display:flex;align-items:center;gap:10px;text-decoration:none; }
+    .nav-logo img { width:32px;height:32px;border-radius:7px;object-fit:cover; }
+    .nav-logo span { font-size:17px;font-weight:700;color:#fff; }
+    .nav-logo em { color:var(--amber);font-style:normal; }
+    .nav-back { font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none;display:flex;align-items:center;gap:6px; }
+    .nav-back:hover { color:var(--amber); }
+    .hero-sm {
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero-sm .badge {
+      display:inline-block;background:rgba(245,184,74,0.15);border:1px solid rgba(245,184,74,0.3);
+      color:var(--amber);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+      padding:5px 14px;border-radius:100px;margin-bottom:16px;
+    }
+    .hero-sm h1 { font-size:2rem;font-weight:700;color:#fff;letter-spacing:-0.02em;margin-bottom:10px; }
+    .hero-sm p { font-size:14px;color:rgba(255,255,255,0.55); }
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+    .lang-switch {
+      display:flex;gap:10px;margin-bottom:40px;
+    }
+    .lang-btn {
+      padding:6px 16px;border-radius:8px;border:1px solid var(--border);
+      font-size:12px;font-weight:600;cursor:pointer;background:var(--off-white);color:var(--text);
+      transition:all 0.2s;
+    }
+    .lang-btn.active { background:var(--navy);color:#fff;border-color:var(--navy); }
+    .legal-section { margin-bottom: 40px; }
+    .legal-section h2 {
+      font-size: 17px; font-weight: 600; color: var(--text);
+      margin-bottom: 12px; padding-bottom: 8px;
+      border-bottom: 2px solid var(--amber);
+      display: inline-block;
+    }
+    .legal-section p, .legal-section li {
+      font-size: 14px; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 10px;
+    }
+    .legal-section ul { padding-left: 20px; }
+    .legal-section li { margin-bottom: 6px; }
+    .highlight {
+      background: rgba(245,184,74,0.08);
+      border-left: 3px solid var(--amber);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .contact-card {
+      background: var(--navy-dark);
+      border-radius: 16px;
+      padding: 28px;
+      color: #fff;
+      margin-top: 48px;
+    }
+    .contact-card h3 { font-size:15px;font-weight:600;color:var(--amber);margin-bottom:10px; }
+    .contact-card p { font-size:13px;color:rgba(255,255,255,0.7);line-height:1.7; }
+    .contact-card a { color:var(--amber);text-decoration:none; }
+    footer {
+      background:var(--navy-dark);padding:24px;text-align:center;
+      font-size:12px;color:rgba(255,255,255,0.4);
+    }
+    footer a { color:rgba(255,255,255,0.4);text-decoration:none;margin:0 8px; }
+    footer a:hover { color:var(--amber); }
+    [data-lang] { display:none; }
+    [data-lang].active { display:block; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="logo.jpg" alt="SkatKm" />
+    <span>skat<em>Km</em></span>
+  </a>
+  <a class="nav-back" href="index.html">← Tilbage til forsiden</a>
+</nav>
+
+<div class="hero-sm">
+  <div class="badge">Juridisk</div>
+  <h1>Privatlivspolitik</h1>
+  <p>Opdateret: September 2026 · Version 1.0</p>
+</div>
+
+<div class="content">
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('da')">🇩🇰 Dansk</button>
+    <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
+  </div>
+
+  <!-- DANISH -->
+  <div data-lang="da" class="active">
+    <div class="legal-section">
+      <h2>1. Dataansvarlig</h2>
+      <p>chmays.app (Alex Mays) er dataansvarlig for SkatKm-appen.</p>
+      <p>Kontakt: <a href="mailto:support@chmays.app" style="color:var(--navy);font-weight:500;">support@chmays.app</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2>2. Hvilke data indsamler vi?</h2>
+      <p>SkatKm indsamler og behandler udelukkende data du selv indtaster:</p>
+      <ul>
+        <li>Hjemmeadresse og arbejdspladsadresser (til km-beregning)</li>
+        <li>Pendlingslogninger (dato, km, transportmiddel)</li>
+        <li>Profiloplysninger (navn, kommune/region)</li>
+        <li>Appindstillinger (sprog, notifikationer, skattesatser)</li>
+        <li>Transportudgifter du logger manuelt (benzin, billetter mv.)</li>
+      </ul>
+      <div class="highlight">
+        Vi indsamler <strong>ikke</strong> betalingsoplysninger (behandles af Apple), placeringshistorik (placering bruges kun aktivt når du trykker "Brug min nuværende placering"), eller andre personidentificerbare oplysninger.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2>3. Hvor opbevares dine data?</h2>
+      <p>Alle data opbevares:</p>
+      <ul>
+        <li><strong>Lokalt på din enhed</strong> — i appens sandboxede lagerplads</li>
+        <li><strong>I din personlige iCloud-konto</strong> — via Apple CloudKit (iCloud.app.skatKm.data)</li>
+      </ul>
+      <div class="highlight">
+        Vi har <strong>ingen adgang</strong> til din iCloud-konto. Dine data forlader aldrig din personlige Apple-infrastruktur. Vi kan ikke se, tilgå eller eksportere dine data.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2>4. Deling med tredjeparter</h2>
+      <p>Vi deler, sælger eller udleverer ikke dine personoplysninger til nogen tredjeparter — hverken til reklameformål, analyse eller andre formål.</p>
+      <p>Apple behandler betalinger via App Store. Se Apples privatlivspolitik for detaljer om den behandling.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>5. Dine rettigheder (GDPR)</h2>
+      <p>Du har ret til at:</p>
+      <ul>
+        <li><strong>Indsigt</strong> — se alle dine data via appen</li>
+        <li><strong>Berigtigelse</strong> — rette dine data direkte i appen</li>
+        <li><strong>Sletning</strong> — slette alle data via Indstillinger → Slet alle data</li>
+        <li><strong>Dataportabilitet</strong> — eksportere dine data som PDF-rapport</li>
+        <li><strong>Indsigelse</strong> — kontakt os for at rejse indsigelse mod behandling</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>6. Placering (GPS)</h2>
+      <p>SkatKm anmoder om adgang til din placering <strong>kun</strong> når du aktivt trykker "Brug min nuværende placering" for at udfylde din hjemmeadresse. Vi gemmer aldrig din løbende GPS-placering eller placeringshistorik.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>7. Notifikationer</h2>
+      <p>Hvis du aktiverer daglige påmindelser, sender appen lokale notifikationer fra din egen enhed. Disse data forlader aldrig din enhed.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>8. Børn</h2>
+      <p>SkatKm er ikke beregnet til børn under 13 år og vi indsamler ikke bevidst data om børn.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>9. Ændringer i privatlivspolitikken</h2>
+      <p>Væsentlige ændringer meddeles via opdateringer i App Store. Denne politik er gældende fra september 2026.</p>
+    </div>
+  </div>
+
+  <!-- ENGLISH -->
+  <div data-lang="en">
+    <div class="legal-section">
+      <h2>1. Data Controller</h2>
+      <p>chmays.app (Alex Mays) is the data controller for the SkatKm app.</p>
+      <p>Contact: <a href="mailto:support@chmays.app" style="color:var(--navy);font-weight:500;">support@chmays.app</a></p>
+    </div>
+
+    <div class="legal-section">
+      <h2>2. What data do we collect?</h2>
+      <p>SkatKm only collects and processes data you enter yourself:</p>
+      <ul>
+        <li>Home address and workplace addresses (for km calculation)</li>
+        <li>Commute log entries (date, km, transport type)</li>
+        <li>Profile information (name, municipality/region)</li>
+        <li>App settings (language, notifications, tax rates)</li>
+        <li>Transport expenses you log manually (fuel, tickets, etc.)</li>
+      </ul>
+      <div class="highlight">
+        We do <strong>not</strong> collect payment information (handled by Apple), location history (location is only used when you actively tap "Use my current location"), or other personally identifiable information.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2>3. Where is your data stored?</h2>
+      <p>All data is stored:</p>
+      <ul>
+        <li><strong>Locally on your device</strong> — in the app's sandboxed storage</li>
+        <li><strong>In your personal iCloud account</strong> — via Apple CloudKit (iCloud.app.skatKm.data)</li>
+      </ul>
+      <div class="highlight">
+        We have <strong>no access</strong> to your iCloud account. Your data never leaves your personal Apple infrastructure. We cannot view, access or export your data.
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2>4. Third-party sharing</h2>
+      <p>We do not share, sell or disclose your personal data to any third parties — for advertising, analytics or any other purpose.</p>
+      <p>Apple processes payments via the App Store. See Apple's privacy policy for details on that processing.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>5. Your rights (GDPR)</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> — view all your data via the app</li>
+        <li><strong>Rectification</strong> — correct your data directly in the app</li>
+        <li><strong>Erasure</strong> — delete all data via Settings → Delete all data</li>
+        <li><strong>Portability</strong> — export your data as a PDF annual report</li>
+        <li><strong>Objection</strong> — contact us to raise an objection to processing</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>6. Location (GPS)</h2>
+      <p>SkatKm requests access to your location <strong>only</strong> when you actively tap "Use my current location" to fill in your home address. We never store your ongoing GPS location or location history.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>7. Notifications</h2>
+      <p>If you enable daily reminders, the app sends local notifications from your own device. This data never leaves your device.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>8. Children</h2>
+      <p>SkatKm is not intended for children under 13 and we do not knowingly collect data about children.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>9. Changes to this policy</h2>
+      <p>Material changes will be communicated via App Store updates. This policy is effective from September 2026.</p>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <h3>Spørgsmål om privatliv? / Privacy questions?</h3>
+    <p>Kontakt os på <a href="mailto:support@chmays.app">support@chmays.app</a> — vi svarer inden for 48 timer.<br />
+    Contact us at <a href="mailto:support@chmays.app">support@chmays.app</a> — we respond within 48 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <p>
+    © 2026 chmays.app · SkatKm
+    &nbsp;·&nbsp;
+    <a href="index.html">Forside</a>
+    <a href="terms.html">Vilkår</a>
+    <a href="mailto:support@chmays.app">support@chmays.app</a>
+  </p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('active', el.dataset.lang === lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.includes(lang === 'da' ? 'Dansk' : 'English'));
+    });
+  }
+</script>
+</body>
+</html>
